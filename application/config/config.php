@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://localhost/japayag';
-$config['base_url'] = 'http://japayag.com/';
+$config['base_url'] = 'https://japayag.com/';
 
 /*
 |--------------------------------------------------------------------------
