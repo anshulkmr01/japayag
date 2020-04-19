@@ -1,0 +1,116 @@
+input:focus, textarea:focus, select:focus, button:focus{
+        outline: none;
+    }
+img{
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.bg-primary .navbar-nav .active>.nav-link {
+    border-bottom: 3px solid #18BC9D !important;
+    border-radius: 9px;
+    color: #fff!important;
+}
+
+.satisfy-font{
+  font-family: 'Satisfy', cursive;
+}
+.gotu-font{
+  font-family: 'Gotu', sans-serif;
+}
+
+.color-505050{
+  color:#ffffff;
+}
+
+.background-efefef{
+  background:#28a09c;
+}
+
+.res-border-right-dark{
+  border-right: 1px solid;
+}
+
+@media only screen and (max-width: 768px) {
+.res-border-right-dark{
+  border-right: 0px solid;
+  border-bottom: 1px solid;
+}
+}
+.today-japa{
+  background:#233546;
+  color: #8ACA2B;
+  font-weight: 800;
+}
+
+
+/*********Floating Message************/
+.toast{
+  position: fixed!important;
+  bottom: 10px!important;
+  left: 10px!important;
+  border: 0px!important;
+  border-radius: 0px!important;
+  z-index: 9999!important;
+}
+.toast-header{
+  padding: 20px;
+  color: #fff!important;
+}
+.toast-header .text-danger{
+  color: #fff!important;
+}
+/*********Floating Message End************/
+
+
+.dropdown-menu{
+	top: 90%;
+	min-width:100% !important;
+}
+.dropdown:hover .dropdown-menu{
+	display: block;
+}
+.GMT-time{
+  text-align: right;
+    position: absolute;
+    right: 25px;
+    padding-top: 10px;
+}
+.youtube-player .videoThumnail{
+  cursor: default; 
+  position: relative;
+}
+.youtube-player .videoDescription{
+  text-align: left;
+}
+.youtube-player .videoDescription .description{
+  font-size: 13px;
+  color: #888888;
+}
+.youtube-player .play{
+    position: absolute;
+    color: #ffffff;
+    top: 35%;
+    font-size: 50px;
+    left: 44%;
+  transition: 0.3s;
+}
+.videoThumnail:hover .play{
+    color: #8aca2b;
+}
+
+.videoThumnail:hover{
+    cursor: pointer;
+}
+.unique-color-dark {
+  color: #fff;
+  text-align: center;
+  background-color: #1c2331 !important;
+}
+.footer.page-footer .footer-copyright {
+    overflow: hidden;
+    text-align: center;
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(0,0,0,0.2);
+  }
