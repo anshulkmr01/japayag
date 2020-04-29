@@ -44,7 +44,7 @@
 					}
 				?>
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-4 pt-5">
 						<?php if(isset($todayJapa) > 0):?>
 
 						<!-- Update Japa Entry -->
@@ -81,8 +81,8 @@
 						<?php endif;?>
 
 					</div>
-					<div class="col-sm-4"></div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 pt-5"></div>
+					<div class="col-sm-4 pt-5">
 						<?= form_open('collectReward')?>
 						<h4 class="text-uppercase">Active Challenges</h4>
 						<hr>
