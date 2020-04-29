@@ -87,7 +87,7 @@
 						<h4 class="text-uppercase">Active Challenges</h4>
 						<hr>
 						<div class="pb-3">
-							Total Reward Collected: <?= "<b>".$totalStars ."</b> ". $star; ?> 
+							Total Reward Collected: <?= '<b>'.$totalStars .'</b> <span class="reward-star"><i class="fas fa-star"></i><span>'; ?> 
 						</div>
 						<div class="display-challenge-block p-3">
 							<h5>Daily chalange of <?= $mala_target;?> Mala Japa yag</h5>
