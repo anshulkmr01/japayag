@@ -114,3 +114,9 @@ img{
     color: rgba(255,255,255,0.6);
     background-color: rgba(0,0,0,0.2);
   }
+.reward-star{
+  color: #f90;
+}
+.display-challenge-block{
+    box-shadow: 1px 1px 20px #e0e0e0;
+}

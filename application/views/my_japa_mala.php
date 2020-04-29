@@ -19,28 +19,35 @@
 					$mala_target = 16;
 					$succes_color = "";
 					$mala_percent_done = 0;
-					$star = "";
-					if(isset($todayJapaExist) >0){
-						$mala_percent_done = $todayJapaExist*100/$mala_target."%";
+					$star = "No Stars";
+					$reward_level = 0;
+					if(isset($todayJapa['japa']) >0){
+						$mala_percent_done = $todayJapa['japa']*100/$mala_target;
 						if($mala_percent_done > 0){
 							$succes_color = "#8aca2d";
 						}
+						
+						if($mala_percent_done > 33){
+							$reward_level = 1;	
+							}
+						if($mala_percent_done > 66){
+							$reward_level = 2;	
+							}
+						if($mala_percent_done > 99){
+							$reward_level = 3;	
+							}
 						if($mala_percent_done > 100){
-							$mala_percent_done = "100%+";
-							$star = '<i class="fas fa-star"></i>';	
+							$mala_percent_done = 100;
 						}
+
+						$star = '<span class="reward-star"><i class="fas fa-star"></i><span>';	
 					}
 				?>
-				<h3>Total Mala Completed : <?= $userTodayJapa ?></h3>
-				<h3 style="color:<?= $succes_color?> "><?= $mala_percent_done?> done of daily challenge <?= $star?></h3>
-				<h4>You have a daily chalange of <?= $mala_target; ?> Mala Japa yag</h4>
-				<hr>
 				<div class="row">
 					<div class="col-sm-4">
-						<?php if(isset($todayJapaExist) > 0):?>
+						<?php if(isset($todayJapa) > 0):?>
 
 						<!-- Update Japa Entry -->
-						<label><?= $todayJapaExist; ?> Japa you have completed today</label>
 						<?= form_open('updateJapa');?>
 					    <div class="form-group">
 					      <label>Update your Japa with new Number</label>
@@ -75,7 +82,47 @@
 
 					</div>
 					<div class="col-sm-4"></div>
-					<div class="col-sm-4"></div>
+					<div class="col-sm-4">
+						<?= form_open('collectReward')?>
+						<h4 class="text-uppercase">Active Challenges</h4>
+						<hr>
+						<div class="pb-3">
+							Total Reward Collected: <?= "<b>".$totalStars ."</b> ". $star; ?> 
+						</div>
+						<div class="display-challenge-block p-3">
+							<h5>Daily chalange of <?= $mala_target;?> Mala Japa yag</h5>
+							<div class="row pt-2">
+							<div class="col-4"><?php if(!$todayJapa['japa']) echo "0"; else echo $todayJapa['japa'];?>/<?=$mala_target
+							?></div>
+							<div class="col-4"><?= $mala_percent_done; ?> %</div>
+							<div class="col-4">
+								<?php
+								if($reward_level !=0){
+									for($i=1; $i <= $reward_level; $i++){
+										echo $star;		
+									}
+								}
+								else echo "<span class='text-muted'>no star</span>";
+								 ?>
+
+								</div>
+							</div>
+							<div class="pt-3">
+							<div class="progress">
+							  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?= $mala_percent_done; ?>%"></div>
+							</div>
+							</div>
+							<div class="collect-reward-button pt-3">
+								<input type="hidden" name="star" value="<?= $reward_level?>">
+								<?php if($todayJapa['dailyReward'] !=0){?>
+								<span class="btn btn-success btn-sm">Collected <i class="far fa-check-circle"></i></span>
+								<?php } else{?>
+								<button type="submit" <?php if($reward_level != 3) echo "disabled";?> class="btn btn-primary btn-sm">Collect Reward</button>
+								<?php }?>
+							</div>
+						</div>
+						<?= form_close();?>
+					</div>
 				</div>
 			</div>
 		</div>

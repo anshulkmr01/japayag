@@ -45,6 +45,25 @@
 				return redirect('my_japa_mala');
 			}
 		}
+
+		function collectReward(){
+			$this->form_validation->set_rules('star','star Field', 'trim|required');
+			if($this->form_validation->run()){
+				$post_data = $this->input->post();
+				if($this->JapaYagModel->saveClaimReward($post_data['star'])){
+					$this->session->set_flashdata('success', "Reward Collected");
+					return redirect('my_japa_mala');
+				}
+				else{
+					$this->session->set_flashdata('error', "An Error Occured Collecting Reward");
+					return redirect('my_japa_mala');		
+				}
+			}
+			else{
+				$this->session->set_flashdata('error', "An Error Occured");
+				return redirect('my_japa_mala');
+			}
+		}
 		
 	}
 ?>

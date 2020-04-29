@@ -24,9 +24,10 @@ class Home extends CI_Controller {
 			return redirect('user_login');
 		}
 
-		$userTodayJapa = $userTodayJapa = $this->JapaYagModel->userTodayJapa();
-		$todayJapa = $isTodayJapaExist = $this->JapaYagModel->isTodayJapaExist();
-		$this->load->view('my_japa_mala',['todayJapaExist'=>$todayJapa,'userTodayJapa'=>$userTodayJapa]);
+		$userTodayJapa = $this->JapaYagModel->userTodayJapa();
+		$todayJapa  = $this->JapaYagModel->isTodayJapaExist();
+		$totalStars = $this->JapaYagModel->totalStars();
+		$this->load->view('my_japa_mala',['todayJapa'=>$todayJapa,'userTodayJapa'=>$userTodayJapa,'totalStars'=>$totalStars]);
 	}
 
 	public function settings()

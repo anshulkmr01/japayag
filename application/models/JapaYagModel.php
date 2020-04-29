@@ -81,8 +81,23 @@
 		function isTodayJapaExist()
 		{
 			$todayDate = $this->GMTDate;
-			$todayJapa = $this->db->where(['date'=>$todayDate,'userID'=>$this->userData['ID']])->get('japayag')->row('japa');
+			$todayJapa = $this->db->where(['date'=>$todayDate,'userID'=>$this->userData['ID']])->get('japayag')->row_array();
 			return $todayJapa;
+		}
+
+		function saveClaimReward($stars){
+			$todayDate = $this->GMTDate;
+			return $this->db->where(['date'=>$todayDate,'userID'=>$this->userData['ID']])->update('japayag',['dailyReward'=>$stars]);
+		}
+
+		function totalStars(){
+			$totalStars = $this->db->select_sum('dailyReward')->where('userID',$this->userData['ID'])->get('japayag')->row('dailyReward');
+			if($totalStars){
+				return $totalStars;
+			}
+			else{
+				return 0;
+			}
 		}
 	}
 ?>

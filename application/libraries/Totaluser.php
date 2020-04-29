@@ -13,6 +13,10 @@ class Totaluser{
 	function total_user(){
 		return $this->CI->UserModel->totalUserCount();
 	}
+
+	function total_stars(){
+		return $this->CI->UserModel->totalStars();
+	}
 }
 
 ?>

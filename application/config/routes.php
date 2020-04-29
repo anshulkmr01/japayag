@@ -70,3 +70,4 @@ $route['settings'] = 'Home/settings';
 
 $route['saveJapa'] = 'JapaYag/saveJapa';
 $route['updateJapa'] = 'JapaYag/updateJapa';
+$route['collectReward'] = 'JapaYag/collectReward';
