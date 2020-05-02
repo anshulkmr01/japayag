@@ -50,14 +50,10 @@
 					<div class="col-sm-4 pt-5">
 						<div class="japa-counter">
 							<h4 class="text-uppercase">Japa Counter</h4>
-						<div>
-							<button class="w-100 btn-primary btn" id="countPlus">Counter +</button>
-						</div>
-						<div>
-							<button class="w-50 pull-left btn-info btn" id="countMinus">Counter -</button>
-						</div>
-						<div>
-							<button class="w-50 pull-right btn-danger btn" id="countReset">Reset</button>
+						<div class="row">
+							<div class="col-12"><button class="w-100 btn-primary btn" id="countPlus">Counter +</button></div>
+							<div class="col-6"><button class="w-100 btn-info btn" id="countMinus">Counter -</button></div>
+							<div class="col-6"><button class="w-100 btn-danger btn" id="countReset">Reset</button></div>
 						</div>
 						</div>
 						<?php if(isset($todayJapa) > 0):?>
