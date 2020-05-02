@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Japa Yag | My Japa Mala Statics</title>
+	<title>Japa Yag | My Japa Statics</title>
 	<!-- Global Css using Helper -->
 	<?php 
 			globalCss(); 
@@ -16,7 +16,7 @@
 		<div class="container-fluid" style="min-height: 500px">
 			<div class="container p-5">
 				<?php 
-					$mala_target = 16;
+					$mala_target = 108;
 					$succes_color = "";
 					$mala_percent_done = 0;
 					$star = "No Stars";
@@ -43,15 +43,38 @@
 						$star = '<span class="reward-star"><i class="fas fa-star"></i><span>';	
 					}
 				?>
+				<div class="row congo-message awesome" id="congoMessage" style="display: none;">
+					<h4 class="rainbow"><i class="fas fa-gifts"></i> Congratulations you have Completed a Mala</h4>
+				</div>
 				<div class="row">
 					<div class="col-sm-4 pt-5">
+						<div class="japa-counter">
+							<h4 class="text-uppercase">Japa Counter</h4>
+						<div>
+							<button class="w-100 btn-primary btn" id="countPlus">Counter +</button>
+						</div>
+						<div>
+							<button class="w-50 pull-left btn-info btn" id="countMinus">Counter -</button>
+						</div>
+						<div>
+							<button class="w-50 pull-right btn-danger btn" id="countReset">Reset</button>
+						</div>
+						</div>
 						<?php if(isset($todayJapa) > 0):?>
-
 						<!-- Update Japa Entry -->
 						<?= form_open('updateJapa');?>
 					    <div class="form-group">
-					      <label>Update your Japa with new Number</label>
-					      <input type="number" min="0" class="form-control" name="japanumber" value="<?= set_value('japanumber')?>" placeholder="New Japa Number">
+					      <div class="row">
+					      	<div class="col-5 text-center">
+					      		<label class="text-uppercase">Japa</label>
+					      		<input type="number" id="japa" min="0" class="form-control text-center" name="japanumber" value="<?= $todayJapa['japa'];?>" placeholder="Japa Number"></div>
+					      	<div class="col-1">
+					      	<label class="">or</label></div>
+					      	<div class="col-5 text-center">
+					      		<label class="text-uppercase">Mala</label>
+					      		<input type="number" id="mala" min="0" class="form-control text-center" name="japamala" value="" placeholder="Mala Number"></div>
+					      </div>
+					      
 					      <?= form_error('japanumber')?>
 					      <small id="emailHelp" class="form-text text-muted">For <?= date('M,d,Y'); ?></small>
 					      <small id="emailHelp" class="form-text text-muted">Make Sure you enter correct number of japa yag, Your Japa Yag Number will be counted for the Global statics</small>
@@ -68,7 +91,16 @@
 						<?= form_open('saveJapa');?>
 					    <div class="form-group">
 					      <label>Number of Japa you have completed today</label>
-					      <input type="number" class="form-control" name="japanumber" value="<?= set_value('japanumber')?>" placeholder="Number of Japa">
+					      <div class="row">
+					      	<div class="col-5 text-center">
+					      		<label class="text-uppercase">Japa</label>
+					      		<input type="number" id="japa" min="0" value="0" class="form-control text-center" name="japanumber" value="<?= $todayJapa['japa'];?>" placeholder="Japa Number"></div>
+					      	<div class="col-1">
+					      	<label class="">or</label></div>
+					      	<div class="col-5 text-center">
+					      		<label class="text-uppercase">Mala</label>
+					      		<input type="number" id="mala" min="0" class="form-control text-center" name="japamala" placeholder="Mala Number"></div>
+					      </div>
 					      <?= form_error('japanumber')?>
 					      <small id="emailHelp" class="form-text text-muted">For <?= date('M,d,Y'); ?></small>
 					    </div>
@@ -90,11 +122,11 @@
 							Total Reward Collected: <?= '<b>'.$totalStars .'</b> <span class="reward-star"><i class="fas fa-star"></i><span>'; ?> 
 						</div>
 						<div class="display-challenge-block p-3">
-							<h5>Daily chalange of <?= $mala_target;?> Mala Japa yag</h5>
+							<h5>Daily chalange of <?= $mala_target;?> Japa yag</h5>
 							<div class="row pt-2">
 							<div class="col-4"><?php if(!$todayJapa['japa']) echo "0"; else echo $todayJapa['japa'];?>/<?=$mala_target
 							?></div>
-							<div class="col-4"><?= $mala_percent_done; ?> %</div>
+							<div class="col-4"><?= round($mala_percent_done); ?> %</div>
 							<div class="col-4">
 								<?php
 								if($reward_level !=0){

@@ -120,3 +120,8 @@ img{
 .display-challenge-block{
     box-shadow: 1px 1px 20px #e0e0e0;
 }
+.japa-counter button{
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+}

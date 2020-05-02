@@ -23,20 +23,56 @@ $(document).ready(function(){
     });
 });
 
-//minus plus input
-$(document).ready(function() {
-      $('.minus').click(function () {
-        var $input = $(this).parent().find('input');
-        var count = parseInt($input.val()) - 1;
-        count = count < 1 ? 1 : count;
-        $input.val(count);
-        $input.change();
-        return false;
-      });
-      $('.plus').click(function () {
-        var $input = $(this).parent().find('input');
-        $input.val(parseInt($input.val()) + 1);
-        $input.change();
-        return false;
-      });
-    });
+//Animated Congo Message//
+
+var congoMessage = document.getElementById('congoMessage');
+ for (var i = 0; i < congoMessage.length; i = i + 1) {
+      $(congoMessage[i]).fadeOut("slow");
+}
+
+//Animated COngo message End
+//Japa Counter +/-
+
+var countPlus = document.getElementById("countPlus");
+var countMinus = document.getElementById("countMinus");
+var reset = document.getElementById("countReset");
+var japa = document.getElementById("japa");
+var mala = document.getElementById("mala");
+
+mala.value = parseInt(document.getElementById("japa").value / 108);
+ 
+count = japa.value;
+count_ = mala.value;
+countPlus.onclick = function() {
+  x = parseInt(document.getElementById("japa").value);
+  x += 1;
+  japa.value = x;
+
+    mala.value = parseInt(document.getElementById("japa").value / 108);
+};
+
+countMinus.onclick = function() {
+  japaVal = document.getElementById("japa").value -= 1;
+  if(japaVal<=0){
+    e.preventDefault();
+    return false;
+  }
+  japa.value = japaVal;
+  mala.value = parseInt(document.getElementById("japa").value / 108);
+};
+
+reset.onclick = function() {
+  japa.value = count;
+  mala.value = count_;
+};
+
+japa.oninput = function(){
+    mala.value = parseInt(document.getElementById("japa").value / 108);
+}
+
+mala.oninput = function(){
+    japa.value = parseInt(document.getElementById("mala").value * 108);
+
+}
+
+//Japa counter
