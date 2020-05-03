@@ -125,3 +125,8 @@ img{
   margin-bottom: 10px;
   border-radius: 0px;
 }
+
+table{
+  margin: auto;
+  width: 100%;
+}

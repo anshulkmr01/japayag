@@ -6,6 +6,7 @@ class Home extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		$this->load->model('JapaYagModel');
+		$this->GMTDate = gmdate('m-d-Y');
 	}
 
 	public function index()
@@ -14,6 +15,25 @@ class Home extends CI_Controller {
 		$todayJapaCount = $this->JapaYagModel->todayJapaCount();
 		$maxJapaCountCity = $this->JapaYagModel->maxJapaCountCity();
 		$totalJapaData = $this->JapaYagModel->totalJapaData();
+
+		foreach ($totalJapaData as $key => $value) {
+			if($value['date'] == $this->GMTDate){
+				$totalJapaData[$key]['todayJapa'] = $totalJapaData[$key]['japa'];
+			}
+			else{
+				$totalJapaData[$key]['todayJapa'] = 0;	
+			}
+		}
+
+		$combined = array();
+		foreach( $totalJapaData as $values )  {
+		  if( ( $key = array_search( $values['city'], array_column( $combined, 'city') ) ) !== false )  {
+		    $combined[$key]['japa'] += $values['japa'];
+		    $combined[$key]['todayJapa'] += $values['todayJapa'];
+		  } else {
+		    $combined[] = $values;
+		  }
+		}
 
 		$japaDataByDate = array();		
 
@@ -32,7 +52,7 @@ class Home extends CI_Controller {
 		    $assembeledData[] = array('label' => $key, 'y' => array_sum($value));
 		}
 
-		$this->load->view('home',['japaCount'=>$japaCount, 'todayJapaCount'=>$todayJapaCount, 'maxJapaCountCity'=>$maxJapaCountCity, 'japaTotalData'=>$assembeledData]);
+		$this->load->view('home',['japaCount'=>$japaCount, 'todayJapaCount'=>$todayJapaCount, 'maxJapaCountCity'=>$maxJapaCountCity, 'japaTotalData'=>$assembeledData, 'japaDataCombined'=>$combined]);
 	}
 
 	public function my_japa_mala()
