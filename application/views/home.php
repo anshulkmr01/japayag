@@ -43,7 +43,7 @@
 						<div class=""><legend>Where We have reached<legend></div>
 					</div>
 					<div class="col-md-4 p-5">
-						<div class="gotu-font"><h2><?php echo ($japaCount*100)/1000000 ?>%</h2></div>
+						<div class="gotu-font"><h2><?php echo round(($japaCount*100)/1000000) ?>%</h2></div>
 						<div class=""><legend>We have Achived<legend></div>
 					</div>
 				</div>
