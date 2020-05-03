@@ -17,12 +17,20 @@
 	<!-- Main Body -->
 	<div class="container-fluid text-center">
 		<div class="continer p-5">
-			<h1 class="satisfy-font">Global Japa Mala Statics</h1>
+			<h1 class="satisfy-font">Global Japa Mala Daly Graph</h1>
 			<hr>
 			<div class="satisfy-font">
 				<h4 class="p-2 color-505050 background-efefef">
 				|| Hare Krishna Hare Krishna Krishna Krishna Hare Hare, Hare Rama Hare Rama Rama Rama Hare Hare ||
 				</h4>
+			</div>
+			<div>
+
+			<div id="chartContainer" class="mt-5" style="height: 370px; width: 100%;"></div>
+			<br>
+
+			<hr>
+			<h3 class="satisfy-font">Global Japa Mala Target</h3>
 			</div>
 			<div class="global-counter pt-5">
 				<div class="row">
@@ -77,6 +85,43 @@
 	<?php 
 			globalJs(); 
 	?>
+
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+	<script>
+	window.onload = function () {
+	 
+	var chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		theme: "light2",
+		title:{
+			text: ""
+		},
+		axisX:{
+			crosshair: {
+				enabled: true,
+				snapToDataPoint: true
+			}
+		},
+		axisY:{
+			title: "Number of Japa Globally",
+			crosshair: {
+				enabled: true,
+				snapToDataPoint: true
+			}
+		},
+		toolTip:{
+			enabled: true
+		},
+		data: [{
+			type: "area",
+			dataPoints: <?php echo json_encode($japaTotalData, JSON_NUMERIC_CHECK); ?>
+		}]
+	});
+	chart.render();
+	 
+	}
+	</script>
 	<script>
 	AOS.init();
 	</script>

@@ -13,7 +13,26 @@ class Home extends CI_Controller {
 		$japaCount = $this->JapaYagModel->globalJapaCount();
 		$todayJapaCount = $this->JapaYagModel->todayJapaCount();
 		$maxJapaCountCity = $this->JapaYagModel->maxJapaCountCity();
-		$this->load->view('home',['japaCount'=>$japaCount, 'todayJapaCount'=>$todayJapaCount, 'maxJapaCountCity'=>$maxJapaCountCity]);
+		$totalJapaData = $this->JapaYagModel->totalJapaData();
+
+		$japaDataByDate = array();		
+
+		foreach ($totalJapaData as $key => $value) {
+			$japaDataByDate[] = ['label'=>$value['date'],'y'=>$value['japa']];
+		}
+
+		$result = array();
+		foreach($japaDataByDate as $k => $v) {
+		    $label = $v['label'];
+		    $result[$label][] = $v['y'];
+		}
+
+		$assembeledData = array();
+		foreach($result as $key => $value) {
+		    $assembeledData[] = array('label' => $key, 'y' => array_sum($value));
+		}
+
+		$this->load->view('home',['japaCount'=>$japaCount, 'todayJapaCount'=>$todayJapaCount, 'maxJapaCountCity'=>$maxJapaCountCity, 'japaTotalData'=>$assembeledData]);
 	}
 
 	public function my_japa_mala()

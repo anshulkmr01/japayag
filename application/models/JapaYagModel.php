@@ -99,5 +99,9 @@
 				return 0;
 			}
 		}
+
+		function totalJapaData(){
+			return $this->db->get('japayag')->result_array();
+		}
 	}
 ?>
