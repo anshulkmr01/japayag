@@ -13,6 +13,18 @@
 		<?php $this->load->view('navbar');?>
 	<!--/ Navbar -->
 	<!-- Main Body -->
+		<div class="container-fluid header-video">
+		<div class="logo-container">
+			<img src="<?= base_url('assets/img/logo.png')?>">
+		</div>
+
+		<div class="counter-container row">
+			<h1>Awaken the True Essence of Your Being by Chanting the Maha-Mantra</h1>
+			<br>
+			<h4>Learn to nurture your higher nature and discover harmony, purpose and a deeper connection with all aspects of your life.</h4>
+		</div>
+		<img src="<?= base_url('assets/img/flower.jpg')?>">
+	</div>
 		<div class="container-fluid" style="min-height: 500px">
 			<div class="container p-5">
 				<?php 

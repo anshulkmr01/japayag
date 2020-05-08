@@ -1,8 +1,7 @@
 <?php
 $url = basename($_SERVER['PHP_SELF']);
 ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="<?= base_url('/')?>">Japa Yag</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">&nbsp;
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -12,7 +11,7 @@ $url = basename($_SERVER['PHP_SELF']);
       <li class="nav-item home <?php if($url == 'home' or $url == 'index.php') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('home')?>">Global Japa Statics<span class="sr-only">(current)</span></a>
       </li>
-<!--       <li class="nav-item yoga_kirtan <?php if($url == 'yoga_kirtan') echo 'active'?>">
+<!--  <li class="nav-item yoga_kirtan <?php if($url == 'yoga_kirtan') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('yoga_kirtan')?>">Yoga Kirtan<span class="sr-only">(current)</span></a>
       </li> -->
       <?php if($this->session->userdata('userData')): ?>
@@ -21,8 +20,20 @@ $url = basename($_SERVER['PHP_SELF']);
       </li>
       <?php endif;?>
     </ul>
-    <form class="form-inline my-2 my-lg-0 dropdown">
-        <button type="button" class="btn dropdown-toggle text-white"><i class="far fa-user-circle"></i> &nbsp;<?php if($userData = $this->session->userData('userData')): echo $userData['name']; else: echo "Account"; endif; ?><span class="caret"></span></button>
+    <?php if($userData = $this->session->userData('userData')){?>
+    <form class="form-inline my-2 my-lg-0">
+        <a href="<?= base_url('logout')?>" type="button" class="btn">Logout</a>
+    </form>
+    <?php } else {?>
+    <form class="form-inline my-2 my-lg-0">
+        <a href="<?= base_url('user_login')?>" type="button" class="btn">Login</a>
+    </form>
+    <form class="form-inline my-2 my-lg-0">
+        <a href="<?= base_url('user_signup')?>" type="button" class="btn">Signup</a>
+    </form>
+   <?php }?>
+    <!--  <form class="form-inline my-2 my-lg-0 dropdown">
+        <button type="button" class="btn dropdown-toggle text-white"><i class="far fa-user-circle"></i> &nbsp;<?php if($userData = $this->session->userData('userData')):  else: echo "Account"; endif; ?><span class="caret"></span></button>
         <div class="dropdown-menu">
           <?php if($this->session->userdata('userData')): ?>
           <a class="dropdown-item" href="<?= base_url('logout')?>"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -32,7 +43,7 @@ $url = basename($_SERVER['PHP_SELF']);
           <a class="dropdown-item" href="<?= base_url('user_signup')?>">Signup</a>
         <?php endif;?>
         </div>
-    </form>
+    </form> -->
   </div>
 </nav>
 

@@ -17,6 +17,24 @@
 		<?php $this->load->view('navbar');?>
 	<!--/ Navbar -->
 	<!-- Main Body -->
+	<div class="container-fluid header-video">
+		<div class="logo-container">
+			<img src="<?= base_url('assets/img/logo.png')?>">
+		</div>
+
+		<div class="counter-container row">
+			<h1>Awaken the True Essence of Your Being by Chanting the Maha-Mantra</h1>
+			<br>
+			<h4>Learn to nurture your higher nature and discover harmony, purpose and a deeper connection with all aspects of your life.</h4>
+<!-- 			<div class="video-header-button">
+				<span><a class="btn btn-primary" href="">See Global Japa Statics</a></span> <span><a class="btn btn-primary" href="">Know Japa Yagna</a></span>
+			</div> -->
+		</div>
+		<video muted="" loop="" autoplay="" data-mp4="true" id="mautic-player-0"> <source src="https://www.chantnow.com/wp-content/uploads/2018/12/Sequence_5.mp4" type="video/mp4"></video>
+		<div class="video-image">
+			<img src="<?= base_url('assets/img/videobackground.png')?>">
+		</div>
+	</div>
 	<div class="container-fluid text-center">
 		<div class="continer p-5">
 			<h1 class="satisfy-font">Global Japa Mala Daly Graph</h1>

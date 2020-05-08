@@ -12,7 +12,12 @@
 	<!-- Navbar -->
 		<?php $this->load->view('navbar');?>
 	<!--/ Navbar -->
-
+	<div class="container-fluid header-video">
+		<div class="logo-container">
+			<img src="<?= base_url('assets/img/logo.png')?>">
+		</div>
+		<img src="<?= base_url('assets/img/2.jpg')?>">
+	</div>
 	<!--Login Block-->
 	<div class="container-fluid">
 		<div class="container">
