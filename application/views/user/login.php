@@ -16,7 +16,9 @@
 		<div class="logo-container">
 			<img src="<?= base_url('assets/img/logo.png')?>">
 		</div>
-		<img src="<?= base_url('assets/img/2.jpg')?>">
+		<div class="counter-container row display-counter-container">
+			<h1>Awaken the True Essence of Your Being by Chanting the Maha-Mantra</h1>
+		</div>
 	</div>
 	<!--Login Block-->
 	<div class="container-fluid">
@@ -37,7 +39,7 @@
 			      <?= form_error('password')?>
 			    </div>
 			    <div class="form-group">
-				    <input type="submit" value="login" class="btn btn-primary">
+				    <input type="submit" value="login" class="btn btn-primary background-rose">
 				</div>
 			  </fieldset>
 			</form>

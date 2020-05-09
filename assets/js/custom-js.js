@@ -75,4 +75,3 @@ mala.oninput = function(){
 
 }
 
-//Japa counter
