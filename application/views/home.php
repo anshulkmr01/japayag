@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166082149-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-166082149-1');
+		</script>
+
 	<title>Japa Yag | Track Your Chanting</title>
 	<!-- Global Css using Helper -->
 	<?php 
@@ -104,6 +114,39 @@
 			</div>
 		</div>
 	</div>
+	<div class="container-fluid japayagna-section pt-5 pb-5">
+		<div class="container">
+				<div class="section-heading  text-center">
+					<h1 class=" mb-3 text-primary fancy-heading">Japa Yagna is for Everyone</h1>
+					<div class="seperator"></div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8">
+						<div class="japayagna-content mt-4">
+						<p>
+							Japa Yagna is a place where anyone can come with krishna concession and can start chanting hare krishna mahamanta. Japa yagna offer many courses for learning Chanting and Meditation.
+						</p>
+
+						<h3>Japa yagna is made for: </h3>
+						<p>
+						<ul>
+							<li>Spread Krishna Consciousness</li>
+							<li>A Digital Plateform for all Krishna Devotee</li>
+							<li>Globally Chant Counting</li>
+							<li>Online Japa Counter</li>
+							<li>Japa Yagna Global Statatics</li>
+							<li>Daily Challanges and Global Challanges for encourage Devotee</li>
+							<li>Japa Courses</li>
+						</ul>
+					</p>
+						</div>
+					</div>
+					<div class="col-sm-4">
+					</div>
+				</div>
+
+		</div>
+	</div>
 	<!--/ Main Body -->
 	<!-- footer -->
 	<footer>
@@ -153,7 +196,7 @@
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script>
-		var player,videoID="7ReJLiMrYMM";
+		var player,videoID="7ReJLiMr-YMM";
 		function onYouTubeIframeAPIReady(){
 			player=new YT.Player("video-placeholder",{
 				videoId:videoID,
