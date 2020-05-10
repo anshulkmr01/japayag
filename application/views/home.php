@@ -36,7 +36,7 @@
 			<img src="<?= base_url('assets/img/videobackground.jpg')?>">
 		</div>
 	</div>
-	<div class="container-fluid text-center">
+	<div class="container-fluid text-center counter-container-parent pb-5">
 		<div class="continer p-5">
 			<!-- <h1 class="satisfy-font">Global Japa Mala Daly Graph</h1>
 			<hr>
@@ -73,12 +73,13 @@
 					</div>
 				</div>
 			</div>
+			<div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary">Get Started</a></span></div>
 		</div>
 			
 	</div>
 
-	<div class="container-fluid text-center">
-		<div class="row mt-5 today-japa p-5">
+	<div class="container-fluid text-center japa-data">
+		<div class="row pt-5 today-japa p-5">
 			<div class="col-sm-4 res-border-right-dark p-2">
 				<?php if($maxJapaCountCity){
 					foreach ($maxJapaCountCity as $key => $value) {
@@ -88,61 +89,18 @@
 				?>
 				<h5>With <span class="counter-value" data-count="<?= $value['count']; ?>">0</span> Japa</h5>
 				<legend><?= $key; ?>, <?= $value['country']; ?></legend>
-				<small>is on top worldwide</small>
+				<span>have Maximum Japa</span>
 				<?php } else echo "<h5>No Japa Available</h5>";?>
 			</div>
 			<div class="col-sm-4 res-border-right-dark p-2">
 				<h5> <span class="counter-value" data-count="<?= $todayJapaCount; ?>">0</span></h5>
 				<legend>Today's Japa Count</legend>
-				<small>world wide</small>
+				<span>world wide</span>
 			</div>
-			<div class="col-sm-4 p-2"></div>
-		</div>
-	</div>
-	<div class="container-fluid text-center pt-5">
-		<div class="continer">
-			<h3 class="satisfy-font">Japa Table</h3>
-			<div class="row pt-4">
-				<div class="col-md-12">
-					<table class="table table-hover" data-sorting="true">
-					  <thead>
-					    <tr class="table-success">
-					      <th scope="col">Country</th>
-					      <th scope="col">City</th>
-					      <th scope="col">Today's Japa</th>
-					      <th scope="col">Total Japa</th>
-					    </tr>
-					  </thead>
-					  <tbody>
-					  	<?php
-					  		$totalJapa = 0;
-					  		$totalTodayJapa = 0;
-					  		$countCity = 0;
-					  		foreach ($japaDataCombined as $key => $value) {
-					  		$countCity++;
-					  		$totalJapa += $value['japa'];
-					  		$totalTodayJapa += $value['todayJapa'];
-					  		?>
-				  			<tr class="">
-						      <th scope="row"><?= $value['country']?></th>
-						      <td><?= $value['city']?></td>
-						      <td><?= $value['todayJapa']?></td>
-						      <td><?= $value['japa']?></td>
-						    </tr>
-					  		<?php
-					  	}?>
-					  </tbody>
-					  <tfoot>
-					  	<tr class="table-primary">
-						      <th scope="row">Total:</th>
-						      <td><?= $countCity; ?> Cities</td>
-						      <td><?= $totalTodayJapa; ?></td>
-						      <td><?= $totalJapa; ?></td>
-						    </tr>
-					  </tfoot>
-					</table>
-				</div>
-				<div class="col-md-6"></div>
+			<div class="col-sm-4 p-2">
+				<h5> <span class="counter-value" data-count="<?= $todayJapaCount; ?>">0</span></h5>
+				<legend>Today's Japa Count</legend>
+				<span>world wide</span>
 			</div>
 		</div>
 	</div>
@@ -195,7 +153,7 @@
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script>
-		var player,videoID="LEeMdzKSFp8_";
+		var player,videoID="7ReJLiMrYMM";
 		function onYouTubeIframeAPIReady(){
 			player=new YT.Player("video-placeholder",{
 				videoId:videoID,

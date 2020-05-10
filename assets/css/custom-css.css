@@ -72,8 +72,8 @@ body{
 }
 }
 .today-japa{
-  background:#233546;
-  color: #8ACA2B;
+  /*color: #8ACA2B;*/
+  color: #5d5d5d;
   font-weight: 800;
 }
 
@@ -431,4 +431,17 @@ nav .form-inline .btn{
 .section-heading{
   padding-right: 10%;
   padding-left: 10%;
+}
+.counter-container-parent{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-image:url(../img/counter-background.jpg);
+}
+.japa-data{
+/*  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-attachment: fixed;
+  background-image:url(../img/parallax4.jpg);*/
 }
