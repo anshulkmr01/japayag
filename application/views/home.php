@@ -137,6 +137,7 @@
 							<li>Japa Yagna Global Statatics</li>
 							<li>Daily Challanges and Global Challanges for encourage Devotee</li>
 							<li>Japa Courses</li>
+							<li>Chanting Krishna Name</li>
 						</ul>
 					</p>
 						</div>
@@ -147,6 +148,25 @@
 
 		</div>
 	</div>
+<!-- 	<div class="container-fluid pt-5 pb-5">
+		<div class="container">
+			
+				<div class="section-heading  text-center">
+					<h1 class=" mb-3 text-primary fancy-heading">Why Chanting?</h1>
+					<div class="seperator"></div>
+				</div>
+				<div class="row mt-4 text-center">
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>Reduces Anxiety and Depression</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>Releases Neuroses</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>Engenders Compassion</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>Boosts Immunity</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>Opens Intuition</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>Increases Radiance</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>It is Empowering</h4></div></div>
+					<div class="chant-reason col-sm-3"><div class="chant-reason-block"><h4>It is Soothing</h4></div></div>
+				</div>
+		</div>
+	</div> -->
 	<!--/ Main Body -->
 	<!-- footer -->
 	<footer>
@@ -196,7 +216,7 @@
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script>
-		var player,videoID="7ReJLiMr-YMM";
+		var player,videoID="7ReJLiMrYMM";
 		function onYouTubeIframeAPIReady(){
 			player=new YT.Player("video-placeholder",{
 				videoId:videoID,
