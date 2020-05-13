@@ -72,6 +72,8 @@ p{
 .res-border-right-dark{
   border-right: 0px solid;
   border-bottom: 1px solid;
+  margin-right: 10%;
+    margin-left: 10%;
 }
 }
 .today-japa{
@@ -142,17 +144,31 @@ p{
 .videoThumnail:hover{
     cursor: pointer;
 }
-.unique-color-dark {
-  color: #fff;
-  text-align: center;
-  background-color: #1c2331 !important;
+.page-footer ul{
+  list-style: none;
+  padding: 0px;
 }
-.footer.page-footer .footer-copyright {
-    overflow: hidden;
-    text-align: center;
-    color: rgba(255,255,255,0.6);
-    background-color: rgba(0,0,0,0.2);
-  }
+
+.page-footer {
+  box-shadow: inset 9px -175px 200px -125px #ffbf0094;
+}
+
+.page-footer a{
+
+  transition: 0.3s;
+  color: #bf4858;
+}
+.page-footer a:hover{
+  color: #b70657;
+}
+.page-footer .social-icons{
+  text-align: center;
+  display: inline-flex;
+  font-size: 25px;
+}
+.page-footer .social-icons li{
+  margin: 0px 10px;
+}
 .reward-star{
   color: #f90;
 }
@@ -463,4 +479,95 @@ nav .form-inline .btn{
 }
 .japayagna-section .japayagna-content ul{
  list-style-image: url('https://img.icons8.com/officexs/16/000000/spa-flower.png');
+}
+.chant-reason{
+  height: 200px;
+  position: relative;
+}
+.chant-reason-block{
+  margin: 10px;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+.chant-reason-block h5{
+  position: absolute;
+  right: 0;
+  left: 0;
+  background: #000;
+  color: #fff;
+  margin: 0px;
+  padding: 10px;
+  bottom: 0px;
+}
+.chant-reason-block h5:after{
+  content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(bottom,rgba(0,0,0,.65) 0,transparent 100%);
+    background: -webkit-linear-gradient(bottom,rgba(0,0,0,.65) 0,transparent 100%);
+    background: linear-gradient(to top,rgba(0,0,0,.65) 0,transparent 45%);
+}
+.chant-reason-block:before{
+    content: '';
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.3);
+    opacity: 0;
+    -webkit-transition: opacity .6s;
+    -moz-transition: opacity .6s;
+    transition: opacity .6s;
+  }
+  .rose-btn-border{
+    border:2px solid #ff4040!important;
+  }
+
+@media screen and (max-width: 991px){
+  .chant-reason {
+    height: 250px;
+}
+}
+@media screen and (max-width: 767px){
+  .chant-reason {
+    height: 380px;
+}
+}
+@media screen and (max-width: 525px){
+  .chant-reason {
+    height: 360px;
+} 
+}
+@media screen and (max-width: 460px){
+  .chant-reason {
+    height: 290px;
+} 
+}
+@media screen and (max-width: 375px){
+  .chant-reason {
+    height: 240px;
+}   
+}
+@media screen and (max-width: 320px){
+  .chant-reason {
+    height: 210px;
+}   
+}
+.online-offering{
+  background-image: url('../img/ouroffering.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+.online-offering-col{
+  background:#fff;
+}
+.online-offering-col p{
+  color: #2d2d2d;
 }
