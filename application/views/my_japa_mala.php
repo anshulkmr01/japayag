@@ -168,7 +168,7 @@
 		</div>
 	<!--/ Main Body -->
 	<!-- footer -->
-	<footer>
+	<footer class="page-footer font-small text-center pt-5" >
 		<?php $this->load->view('footer');?>
 	</footer>
 	<!-- /footer -->
