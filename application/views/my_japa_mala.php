@@ -57,26 +57,26 @@
 				<div class="row">
 					<div class="col-sm-4 pt-5">
 						<div class="japa-counter">
-							<h4 class="text-uppercase">Japa Counter</h4>
+							<h4 class="text-uppercase">Online Japa Counter</h4>
 						<div class="row">
-							<div class="col-12"><button class="w-100 btn-primary btn" id="countPlus">Counter +</button></div>
-							<div class="col-6"><button class="w-100 btn-info btn" id="countMinus">Counter -</button></div>
-							<div class="col-6"><button class="w-100 btn-danger btn" id="countReset">Reset</button></div>
+							<div class="col-12"><button class="counter-btn rose-btn-primary w-100 btn-primary btn" id="countPlus">Counter +</button></div>
+							<div class="col-6"><button class="counter-btn w-100 btn-info btn" id="countMinus">Counter -</button></div>
+							<div class="col-6"><button class="counter-btn w-100 btn-danger rose-bnt-danger btn" id="countReset">Reset</button></div>
 						</div>
 						</div>
 						<?php if(isset($todayJapa) > 0):?>
 						<!-- Update Japa Entry -->
 						<?= form_open('updateJapa');?>
 					    <div class="form-group">
-					      <div class="row">
-					      	<div class="col-5 text-center">
+					      <div class="row m-auto">
+					      	<div class="col-5 m-auto text-center">
 					      		<label class="text-uppercase">Japa</label>
-					      		<input type="number" id="japa" min="0" class="form-control text-center" name="japanumber" value="<?= $todayJapa['japa'];?>" placeholder="Japa Number"></div>
-					      	<div class="col-1">
+					      		<input type="number" id="japa" min="0" class="font-weight-bold text-dark form-control border-2 border-warning text-center" name="japanumber" value="<?= $todayJapa['japa'];?>" placeholder="Japa Number"></div>
+					      	<div class="col-1 m-auto">
 					      	<label class="">or</label></div>
-					      	<div class="col-5 text-center">
+					      	<div class="col-5 m-auto text-center">
 					      		<label class="text-uppercase">Mala</label>
-					      		<input type="number" id="mala" min="0" class="form-control text-center" name="japamala" value="" placeholder="Mala Number"></div>
+					      		<input type="number" id="mala" min="0" class="font-weight-bold text-dark form-control border-2 border-warning text-center" name="japamala" value="" placeholder="Mala Number"></div>
 					      </div>
 					      
 					      <?= form_error('japanumber')?>
@@ -84,7 +84,7 @@
 					      <small id="emailHelp" class="form-text text-muted">Make Sure you enter correct number of japa yag, Your Japa Yag Number will be counted for the Global statics</small>
 					    </div>
 						<fieldset class="form-group">
-							<input type="submit" value="Update" class="btn btn-primary">
+							<input type="submit" value="Update" class="rose-btn-primary btn btn-primary">
 						</fieldset>
 						<?= form_close(); ?>
 						<!-- Update Japa Entry End -->
@@ -96,20 +96,20 @@
 					    <div class="form-group">
 					      <label>Number of Japa you have completed today</label>
 					      <div class="row">
-					      	<div class="col-5 text-center">
+					      	<div class="col-5 m-auto text-center">
 					      		<label class="text-uppercase">Japa</label>
-					      		<input type="number" id="japa" min="0" value="0" class="form-control text-center" name="japanumber" value="<?= $todayJapa['japa'];?>" placeholder="Japa Number"></div>
-					      	<div class="col-1">
+					      		<input type="number" id="japa" min="0" value="0" class="border-2 border-warning font-weight-bold form-control text-center" name="japanumber" value="<?= $todayJapa['japa'];?>" placeholder="Japa Number"></div>
+					      	<div class="col-1 m-auto">
 					      	<label class="">or</label></div>
-					      	<div class="col-5 text-center">
+					      	<div class="col-5 m-auto text-center">
 					      		<label class="text-uppercase">Mala</label>
-					      		<input type="number" id="mala" min="0" class="form-control text-center" name="japamala" placeholder="Mala Number"></div>
+					      		<input type="number" id="mala" min="0" class="border-2 border-warning font-weight-bold form-control text-center" name="japamala" placeholder="Mala Number"></div>
 					      </div>
 					      <?= form_error('japanumber')?>
 					      <small id="emailHelp" class="form-text text-muted">For <?= date('M,d,Y'); ?></small>
 					    </div>
 						<fieldset class="form-group">
-							<input type="submit" value="Save" class="btn btn-primary">
+							<input type="submit" value="Save" class="rose-btn-primary btn btn-primary">
 						</fieldset>
 						<?= form_close(); ?>
 						<!-- New Japa Entry End -->
@@ -153,7 +153,7 @@
 								<?php if($todayJapa['dailyReward'] !=0){?>
 								<span class="btn btn-success btn-sm">Collected <i class="far fa-check-circle"></i></span>
 								<?php } else{?>
-								<button type="submit" <?php if($reward_level != 3) echo "disabled";?> class="btn btn-primary btn-sm">Collect Reward</button>
+								<button type="submit" <?php if($reward_level != 3) echo "disabled";?> class="rose-btn-primary btn btn-primary btn-sm">Collect Reward</button>
 								<?php }?>
 							</div>
 						</div>
