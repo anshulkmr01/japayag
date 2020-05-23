@@ -14,6 +14,10 @@ $url = basename($_SERVER['PHP_SELF']);
 <!--  <li class="nav-item yoga_kirtan <?php if($url == 'yoga_kirtan') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('yoga_kirtan')?>">Yoga Kirtan<span class="sr-only">(current)</span></a>
       </li> -->
+
+      <li class="nav-item home <?php if($url == 'whychanting') echo 'active'?>">
+        <a class="nav-link" href="<?= base_url('whychanting')?>">Why Chanting<span class="sr-only">(current)</span></a>
+      </li>
       <?php if($this->session->userdata('userData')): ?>
       <li class="nav-item my_japa_mala <?php if($url == 'my_japa_mala') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('my_japa_mala')?>">My Japa <span class="sr-only"></span></a>

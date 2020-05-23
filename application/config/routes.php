@@ -67,6 +67,8 @@ $route['setNewPassword'] = 'user/Authentication/setNewPassword';
 $route['my_japa_mala'] = 'Home/my_japa_mala';
 $route['yoga_kirtan'] = 'Home/yoga_kirtan';
 $route['settings'] = 'Home/settings';
+$route['knowJapayag'] = 'Home/knowJapayag';
+$route['whychanting'] = 'Home/whychanting';
 
 $route['saveJapa'] = 'JapaYag/saveJapa';
 $route['updateJapa'] = 'JapaYag/updateJapa';

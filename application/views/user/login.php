@@ -14,7 +14,7 @@
 	<!--/ Navbar -->
 	<div class="container-fluid header-video">
 		<div class="logo-container">
-			<img src="<?= base_url('assets/img/logo.png')?>">
+			<a href="<?= base_url('/')?>"><img src="<?= base_url('assets/img/logo.png')?>"></a>
 		</div>
 		<div class="counter-container row display-counter-container">
 			<h1>Awaken the True Essence of Your Being by Chanting the Maha-Mantra</h1>
@@ -39,7 +39,7 @@
 			      <?= form_error('password')?>
 			    </div>
 			    <div class="form-group">
-				    <input type="submit" value="login" class="btn btn-primary background-rose">
+				    <input type="submit" value="login" class="btn btn-primary rose-btn-primary">
 				</div>
 			  </fieldset>
 			</form>

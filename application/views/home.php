@@ -29,14 +29,14 @@
 	<!-- Main Body -->
 	<div class="container-fluid header-video">
 		<div class="logo-container">
-			<img src="<?= base_url('assets/img/logo.png')?>">
+			<a href="<?= base_url('/')?>"><img src="<?= base_url('assets/img/logo.png')?>"></a>
 		</div>
 		<div class="counter-container row">
 			<h1>Awaken the True Essence of Your Being by Chanting the Maha-Mantra</h1>
 			<br>
 			<h4>Learn to nurture your higher nature and discover harmony, purpose and a deeper connection with all aspects of your life.</h4>
 			<div class="video-header-button"  data-aos="fade-up">
-				<span><a class="btn btn-primary transparent-button" href="">See Global Japa Statics</a></span> <span><a class="btn btn-primary transparent-button" href="">Know Japa Yagna</a></span>
+				<span><a class="btn btn-primary transparent-button" href="">See Global Japa Statics</a></span> <span><a class="btn btn-primary transparent-button" href="<?= base_url('knowJapayag'); ?>">Know Japa Yagna</a></span>
 			</div>
 		</div>
 		<div class="overlay-video"></div>
@@ -140,7 +140,7 @@
 							<li>Japa Courses</li>
 							<li>Chanting Krishna Name</li>
 						</ul>
-					</p>
+						</p>
 						</div>
 					</div>
 					<div class="col-sm-4">
@@ -168,7 +168,7 @@
 					<div class="chant-reason col-sm-12 col-md-6 col-lg-3"><div data-aos="fade-up" class="chant-reason-block"><img src="<?= base_url('assets/img/why-chanting/Empowering.jpg')?>"><h5>It is Empowering</h5></div></div>
 					<div class="chant-reason col-sm-12 col-md-6 col-lg-3"><div data-aos="fade-up" class="chant-reason-block"><img src="<?= base_url('assets/img/why-chanting/Depression.jpg')?>"><h5>It is Soothing</h5></div></div>
 				</div>
-				<div class="pt-2 text-center"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">Read More</a></span></div>
+				<div class="pt-2 text-center"><span><a href="<?= base_url('whychanting')?>" class="btn btn-primary rose-btn-border">Read More</a></span></div>
 		</div>
 	</div>
 	

@@ -154,6 +154,9 @@
 								<span class="btn btn-success btn-sm">Collected <i class="far fa-check-circle"></i></span>
 								<?php } else{?>
 								<button type="submit" <?php if($reward_level != 3) echo "disabled";?> class="rose-btn-primary btn btn-primary btn-sm">Collect Reward</button>
+								<div>
+								<small>Complete 108 japa means 1 mala to collect Reward</small>
+								</div>
 								<?php }?>
 							</div>
 						</div>

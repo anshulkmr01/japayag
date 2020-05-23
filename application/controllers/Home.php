@@ -101,4 +101,12 @@ class Home extends CI_Controller {
 
 		$this->load->view('yoga_kirtan',['decoded'=>$decoded, 'decodedForLatest'=>$decodedForLatest]);
 	}
+
+	public function knowJapayag(){
+		$this->load->view('knowJapayag');
+	}
+
+	public function whychanting(){
+		$this->load->view('whychanting');
+	}
 }
