@@ -232,7 +232,7 @@
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<script src="https://www.youtube.com/iframe_api"></script>
 	<script>
-		var player,videoID="7ReJLiMrYMM";
+		var player,videoID="4kzBjW5y8qs";
 		function onYouTubeIframeAPIReady(){
 			player=new YT.Player("video-placeholder",{
 				videoId:videoID,
