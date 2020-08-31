@@ -119,48 +119,65 @@
 					</div>
 					<div class="col-sm-4 pt-5"></div>
 					<div class="col-sm-4 pt-5">
-						<?= form_open('collectReward')?>
-						<h4 class="text-uppercase">Active Challenges</h4>
-						<hr>
-						<div class="pb-3">
-							Total Reward Collected: <?= '<b>'.$totalStars .'</b> <span class="reward-star"><i class="fas fa-star"></i><span>'; ?> 
+						<div>
+							<?= form_open('')?>
+							<h4 class="text-uppercase">Total Japa / Mala</h4>
+							<hr>
+							<div class="pb-3">
+								Member Since: <?= date('d/M/Y', strtotime($this->session->userdata('userData')['date_of_registration']))?>
+							</div>
+							<div class="display-challenge-block p-3">
+								<h5><?= $userTotalJapa;?> Japa / <?= (int)($userTotalJapa / 108)?> Mala</h5>
+							</div>
+							<?= form_close();?>
 						</div>
-						<div class="display-challenge-block p-3">
-							<h5>Daily chalange of <?= $mala_target;?> Japa yag</h5>
-							<div class="row pt-2">
-							<div class="col-4"><?php if(!$todayJapa['japa']) echo "0"; else echo $todayJapa['japa'];?>/<?=$mala_target
-							?></div>
-							<div class="col-4"><?= round($mala_percent_done); ?> %</div>
-							<div class="col-4">
-								<?php
-								if($reward_level !=0){
-									for($i=1; $i <= $reward_level; $i++){
-										echo $star;		
-									}
-								}
-								else echo "<span class='text-muted'>no star</span>";
-								 ?>
 
+						<!-- 108 japa challange -->
+						<div class="pt-5 active_challanges">
+							<?= form_open('collectReward')?>
+							<h4 class="text-uppercase">Active Challenges</h4>
+							<hr>
+							<div class="pb-3">
+								Total Reward Collected: <?= '<b>'.$totalStars .'</b> <span class="reward-star"><i class="fas fa-star"></i><span>'; ?> 
+							</div>
+							<div class="display-challenge-block p-3">
+								<h5>Daily chalange of <?= $mala_target;?> Japa yag</h5>
+								<div class="row pt-2">
+								<div class="col-4"><?php if(!$todayJapa['japa']) echo "0"; else echo $todayJapa['japa'];?>/<?=$mala_target
+								?></div>
+								<div class="col-4"><?= round($mala_percent_done); ?> %</div>
+								<div class="col-4">
+									<?php
+									if($reward_level !=0){
+										for($i=1; $i <= $reward_level; $i++){
+											echo $star;		
+										}
+									}
+									else echo "<span class='text-muted'>no star</span>";
+									 ?>
+
+									</div>
+								</div>
+								<div class="pt-3">
+								<div class="progress">
+								  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?= $mala_percent_done; ?>%"></div>
+								</div>
+								</div>
+								<div class="collect-reward-button pt-3">
+									<input type="hidden" name="star" value="<?= $reward_level?>">
+									<?php if($todayJapa['dailyReward'] !=0){?>
+									<span class="btn btn-success btn-sm">Collected <i class="far fa-check-circle"></i></span>
+									<?php } else{?>
+									<button type="submit" <?php if($reward_level != 3) echo "disabled";?> class="rose-btn-primary btn btn-primary btn-sm">Collect Reward</button>
+									<div>
+									<small>Complete 108 japa means 1 mala to collect Reward</small>
+									</div>
+									<?php }?>
 								</div>
 							</div>
-							<div class="pt-3">
-							<div class="progress">
-							  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: <?= $mala_percent_done; ?>%"></div>
-							</div>
-							</div>
-							<div class="collect-reward-button pt-3">
-								<input type="hidden" name="star" value="<?= $reward_level?>">
-								<?php if($todayJapa['dailyReward'] !=0){?>
-								<span class="btn btn-success btn-sm">Collected <i class="far fa-check-circle"></i></span>
-								<?php } else{?>
-								<button type="submit" <?php if($reward_level != 3) echo "disabled";?> class="rose-btn-primary btn btn-primary btn-sm">Collect Reward</button>
-								<div>
-								<small>Complete 108 japa means 1 mala to collect Reward</small>
-								</div>
-								<?php }?>
-							</div>
+							<?= form_close();?>
 						</div>
-						<?= form_close();?>
+						<!-- 108 japa chalange end -->
 					</div>
 				</div>
 				<div class="row">

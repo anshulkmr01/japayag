@@ -68,10 +68,10 @@
 			return $count;
 		}
 
-		function userTodayJapa(){
-			$userTodayJapa = $this->db->select_sum('japa')->where('userID',$this->userData['ID'])->get('japayag')->row('japa');
-			if($userTodayJapa){
-				return $userTodayJapa;
+		function userTotalJapa(){
+			$userTotalJapa = $this->db->select_sum('japa')->where('userID',$this->userData['ID'])->get('japayag')->row('japa');
+			if($userTotalJapa){
+				return $userTotalJapa;
 			}
 			else{
 				return 0;

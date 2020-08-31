@@ -44,7 +44,7 @@
 				}
 
 				$this->session->set_flashdata('success','You are Registered Successfully. Enjoy Your Shopping');
-				return redirect('home');
+				return redirect('my_japa_mala');
 			}
 			else{
 				$this->session->set_flashdata('error',$result);
@@ -70,7 +70,7 @@
 						return redirect($this->session->userdata('redirect'));
 					}
 					$this->session->set_flashdata('success','Hello User! You are in');
-					return redirect('home');
+					return redirect('my_japa_mala');
 				}
 				else{
 					$this->session->set_flashdata('error',$result);

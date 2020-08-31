@@ -63,9 +63,9 @@
 
 			<hr> -->
 			<div class="section-heading">
-				<h1 class=" mb-3 text-primary fancy-heading">Global Japa Yagna</h1>
+				<h1 class=" mb-3 text-primary fancy-heading">5 Million Japa for the speedy recovery of His Holiness Gopal Krishna Maharaj</h1>
 				<div class="seperator"></div>
-				<p class="m-4">Global Japa Yagna is Counting Japa From All Over World. We are Targeting 1 Million Japa in this COVID-19 Situation. Krishna will Bless us. Let's Chant Hare Krishna Maha Mantra Together and Fight against COVID-19</p>
+				<p class="m-4">Global Japa Yagna is Counting Japa From All Over World. We are targeting 5M Japa for the speedy recovery of His Holiness Gopal Krishna Maharaj. lets chant hare krishna maha mantra together.</p>
 			</div>	
 			</div>
 			<div class="global-counter">
@@ -180,9 +180,9 @@
 					<p class=" mt-4">Learn Powerful Meditation Techniques and Explore the Ancient Wisdom Behind Chanting.</p>
 				</div>
 				<div class="row mt-4 text-center">
-					<div class="mt-5 col-sm-12 col-md-4"><div data-aos="fade-up" class="online-offering-col"><img src="<?= base_url('assets/img/maxresdefault.jpg'); ?>"><div class="p-3"><h4>Learn Chanting in 5 Minute</h4><p class="text-justify">For the beginners or who are not aware frrom how to do chanting we have a short video make them learn how to start chanting Hare Krishna Mahamantra.</p><div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">More Info</a></span></div></div></div></div>
-					<div class="mt-5 col-sm-12 col-md-4"><div data-aos="fade-up" class="online-offering-col"><img src="<?= base_url('assets/img/chantingcourse.jpg'); ?>"><div class="p-3"><h4>Chanting Course</h4><p class="text-justify">Who is well known how to chant we have chanting course for them for better meditation during chanting. We are launching new caourses for more knowledge about chanting</p><div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">More Info</a></span></div></div></div></div>
-					<div class="mt-5 col-sm-12 col-md-4"><div data-aos="fade-up" class="online-offering-col"><img src="<?= base_url('assets/img/sprituallife.jpg'); ?>"><div class="p-3"><h4>How to live Spritual</h4><p class="text-justify">To live spiritually involves bringing as much spirit into your life as possible. Japa Yagna offering different cources and life style on how can we live spritual life. </p><div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">More Info</a></span></div></div></div></div>
+					<div class="mt-5 col-sm-12 col-md-4"><div data-aos="fade-up" class="online-offering-col"><img src="<?= base_url('assets/img/maxresdefault.jpg'); ?>"><div class="p-3"><h4>Learn Chanting in 5 Minute</h4><p class="text-justify">For the beginners or who are not aware frrom how to do chanting we have a short video make them learn how to start chanting Hare Krishna Mahamantra.</p><!-- <div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">More Info</a></span></div> --></div></div></div>
+					<div class="mt-5 col-sm-12 col-md-4"><div data-aos="fade-up" class="online-offering-col"><img src="<?= base_url('assets/img/chantingcourse.jpg'); ?>"><div class="p-3"><h4>Chanting Course</h4><p class="text-justify">Who is well known how to chant we have chanting course for them for better meditation during chanting. We are launching new caourses for more knowledge about chanting</p><!-- <div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">More Info</a></span></div> --></div></div></div>
+					<div class="mt-5 col-sm-12 col-md-4"><div data-aos="fade-up" class="online-offering-col"><img src="<?= base_url('assets/img/sprituallife.jpg'); ?>"><div class="p-3"><h4>How to live Spritual</h4><p class="text-justify">To live spiritually involves bringing as much spirit into your life as possible. Japa Yagna offering different cources and life style on how can we live spritual life. </p><!-- <div class="pt-2"><span><a href="<?= base_url('my_japa_mala')?>" class="btn btn-primary rose-btn-border">More Info</a></span></div> --></div></div></div>
 				</div>
 		</div>
 	</div>

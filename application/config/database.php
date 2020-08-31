@@ -77,13 +77,13 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	
-	// 'username' => 'root',
-	// 'password' => '',
-	// 'database' => 'japayag',
-	
-	'username' => 'japayag',
-	'password' => 'japayagna',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'japayag',
+	
+	// 'username' => 'japayag',
+	// 'password' => 'japayagna',
+	// 'database' => 'japayag',
 	
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

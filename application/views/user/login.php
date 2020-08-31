@@ -23,8 +23,9 @@
 	<!--Login Block-->
 	<div class="container-fluid">
 		<div class="container">
-			<div class="row">
-			<div class="user-login p-5 col-md-6">
+			<div class="row mt-5">
+			<div class="col-md-3"></div>
+			<div class="user-login p-5 col-md-6 border">
 			<form action="validateUser" method="post">
 			  <fieldset>
 			    <legend>Login to Continue</legend>
@@ -51,7 +52,7 @@
 				<label>New User? <a href="<?= base_url('user_signup')?>">Signup here</a></label>
 		    </div>
 			 </div>
-			<div class="col-md-6"></div>
+			<div class="col-md-3"></div>
 			</div>
 		</div>
 	</div>

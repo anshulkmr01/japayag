@@ -7,16 +7,16 @@
 		<legend>Contact us</legend>
 		<div class="seperator"></div>
 		<ul class="pt-4">
-			<a href="tel:+918802609662"><li><i class="fas fa-phone"></i> +91 8802609662</li></a>
-			<a href="mailto:contact@japayag.com"><li><i class="fas fa-envelope"></i> contact@japayag.com</li></a>
+			<a href="tel:+1 (587) 719-0883"><li><i class="fas fa-phone"></i> +1 (587) 719-0883</li></a>
+			<a href="mailto:sandeepgarg.2000@gmail.com"><li><i class="fas fa-envelope"></i> sandeepgarg.2000@gmail.com</li></a>
 		</ul>
 	</div>
 	<div class="col-md-4">
 		<legend>More from Japa Yagna</legend>
 		<div class="seperator"></div>
 		<ul class="pt-4">
-			<li><a href="https://www.yogawheel.com/">Yoga Wheel</a></li>
-			<li><a href="https://www.veganforlife.com/">Vegan For Life</a></li>
+			<li><a href="#">Yoga Wheel</a></li>
+			<li><a href="#">Vegan For Life</a></li>
 		</ul>
 	</div>
 	<div class="col-md-4">
