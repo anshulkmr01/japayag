@@ -71,7 +71,7 @@
 			<div class="global-counter">
 				<div class="row" id="counter">
 					<div class="col-md-4 p-5 res-border-right-dark">
-						<div class="gotu-font"><h2><span class="counter-value" data-count="10">0</span> M Japa</h2></div>
+						<div class="gotu-font"><h2><span class="counter-value" data-count="5">0</span> M Japa</h2></div>
 						<div class=""><legend>We are targeting<legend></div>
 					</div>
 					<div class="col-md-4 p-5 res-border-right-dark">
@@ -90,6 +90,7 @@
 
 	<div class="container-fluid text-center japa-data" data-aos="fade-up">
 		<div class="row pt-5 today-japa p-5">
+			<div class="col-sm-2"></div>
 			<div class="col-sm-4 res-border-right-dark p-2">
 				<?php if($maxJapaCountCity){
 					foreach ($maxJapaCountCity as $key => $value) {
@@ -102,16 +103,12 @@
 				<span>have Maximum Japa</span>
 				<?php } else echo "<h5>No Japa Available</h5>";?>
 			</div>
-			<div class="col-sm-4 res-border-right-dark p-2">
-				<h5> <span class="counter-value" data-count="<?= $todayJapaCount; ?>">0</span></h5>
-				<legend>Today's Japa Count</legend>
-				<span>world wide</span>
-			</div>
 			<div class="col-sm-4 p-2">
 				<h5> <span class="counter-value" data-count="<?= $todayJapaCount; ?>">0</span></h5>
 				<legend>Today's Japa Count</legend>
 				<span>world wide</span>
 			</div>
+			<div class="col-sm-2"></div>
 		</div>
 	</div>
 
