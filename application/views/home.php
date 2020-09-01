@@ -88,7 +88,7 @@
 						<div class=""><legend>Where We have reached<legend></div>
 					</div>
 					<div class="col-md-4 p-5">
-						<div class="gotu-font"><h2><span class="counter-value" data-count="<?php echo round(($japaCount*100)/5000000) ?>">0</span>%</h2></div>
+						<div class="gotu-font"><h2><span class="counter-value" data-count="<?php echo number_format(($japaCount*100)/5000000,1) ?>">0</span>%</h2></div>
 						<div class=""><legend>We have Achived<legend></div>
 					</div>
 				</div>
