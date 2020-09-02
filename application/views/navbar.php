@@ -11,6 +11,9 @@ $url = basename($_SERVER['PHP_SELF']);
       <li class="nav-item home <?php if($url == 'home' or $url == 'index.php') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('home')?>">Global Japa Statics<span class="sr-only">(current)</span></a>
       </li>
+<!--       <li class="nav-item home <?php if($url == 'narasimha-kavacham') echo 'active'?>">
+        <a class="nav-link" href="<?= base_url('narasimha-kavacham')?>">Narasimha Kavacham<span class="sr-only">(current)</span></a>
+      </li> -->
 <!--  <li class="nav-item yoga_kirtan <?php if($url == 'yoga_kirtan') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('yoga_kirtan')?>">Yoga Kirtan<span class="sr-only">(current)</span></a>
       </li> -->
