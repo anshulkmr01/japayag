@@ -48,7 +48,8 @@
 				<span><a class="btn btn-primary transparent-button" href="">See Global Japa Statics</a></span> <span><a class="btn btn-primary transparent-button" href="<?= base_url('knowJapayag'); ?>">Know Japa Yagna</a></span>
 			</div>
 		</div>
-		<div class="overlay-video"></div>
+		<!-- rmove comment if you want to protect video player for being controlled by users -->
+		<!-- <div class="overlay-video"></div> --> 
 		<div id="video-placeholder"></div>
 		<span class="video-volume"><i id="mute" class="fas fa-volume-up"></i></span>
 		<div class="video-image">
