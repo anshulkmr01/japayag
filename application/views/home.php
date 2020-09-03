@@ -3,7 +3,7 @@
 <head>
 	<title>Japa Yag | Global Hare Krishna Mahamantra Chanting Counter</title>
 	<meta name="description" content="We are targeting 5M Japa for the speedy recovery of His Holiness Gopal Krishna Maharaj."/>
-
+	<script data-ad-client="ca-pub-4512702343384035" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176842645-1"></script>
 	<script>
