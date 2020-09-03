@@ -3,7 +3,7 @@
 	function globalCss()
 	{
 		?>
-		<?= link_tag("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")?>
+		<?= link_tag("https://stackpath.bootstrapcdn.com/bootstrap/4.5.7/css/bootstrap.min.css")?>
 		<?= link_tag("assets/css/bootswatch/bootstrap.min.css")?>
 		<?= link_tag("assets/css/custom-css.css")?>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">

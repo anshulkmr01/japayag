@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Why we do Chanting</title>
+	<meta name="description" content="We are targeting 5M Japa for the speedy recovery of His Holiness Gopal Krishna Maharaj."/>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176842645-1"></script>
 		<script>
@@ -11,7 +13,7 @@
 		  gtag('config', 'UA-176842645-1');
 		</script>
 
-	<title>Why Chanting</title>
+	<meta desc="utf-8">
 	<!-- Global Css using Helper -->
 	<?php 
 			globalCss(); 

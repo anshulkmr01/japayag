@@ -9,18 +9,17 @@ $url = basename($_SERVER['PHP_SELF']);
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item home <?php if($url == 'home' or $url == 'index.php') echo 'active'?>">
-        <a class="nav-link" href="<?= base_url('home')?>">Global Japa Statics<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?= base_url('home')?>">Global Japa Yagna<span class="sr-only">(current)</span></a>
       </li>
-<!--       <li class="nav-item home <?php if($url == 'narasimha-kavacham') echo 'active'?>">
-        <a class="nav-link" href="<?= base_url('narasimha-kavacham')?>">Narasimha Kavacham<span class="sr-only">(current)</span></a>
-      </li> -->
-<!--  <li class="nav-item yoga_kirtan <?php if($url == 'yoga_kirtan') echo 'active'?>">
-        <a class="nav-link" href="<?= base_url('yoga_kirtan')?>">Yoga Kirtan<span class="sr-only">(current)</span></a>
-      </li> -->
-
+      <li class="nav-item home <?php if($url == 'japa-statics') echo 'active'?>">
+        <a class="nav-link" href="<?= base_url('japa-statics')?>">Japa Statics<span class="sr-only">(current)</span></a>
+      </li>
       <li class="nav-item home <?php if($url == 'whychanting') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('whychanting')?>">Why Chanting<span class="sr-only">(current)</span></a>
       </li>
+<!--  <li class="nav-item yoga_kirtan <?php if($url == 'yoga_kirtan') echo 'active'?>">
+        <a class="nav-link" href="<?= base_url('yoga_kirtan')?>">Yoga Kirtan<span class="sr-only">(current)</span></a>
+      </li> -->
       <?php if($this->session->userdata('userData')): ?>
       <li class="nav-item my_japa_mala <?php if($url == 'my_japa_mala') echo 'active'?>">
         <a class="nav-link" href="<?= base_url('my_japa_mala')?>">My Japa <span class="sr-only"></span></a>

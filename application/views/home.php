@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Japa Yag | Global Hare Krishna Mahamantra Chanting Counter</title>
+	<meta name="description" content="We are targeting 5M Japa for the speedy recovery of His Holiness Gopal Krishna Maharaj."/>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176842645-1"></script>
 	<script>
@@ -19,8 +22,6 @@
 
 		  gtag('config', 'UA-166082149-1');
 		</script>
-
-	<title>Japa Yag | Track Your Chanting</title>
 	<!-- Global Css using Helper -->
 	<?php 
 			globalCss(); 
