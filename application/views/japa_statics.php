@@ -67,7 +67,9 @@
 				      <td><?= $key; ?></td>
 				      <td><?= $value['total_japa']; ?></td>
 				      <td><?= $value['today_japa']; ?></td>
-				      <td><?= $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>" ?></td>
+				      <td><?php if ($value['today_max_japa_by']) {
+				      echo $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>";
+				      } ?></td>
 				    </tr>
 				  	<?php endforeach ?>
 				  </tbody>
