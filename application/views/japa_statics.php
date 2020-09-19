@@ -42,35 +42,34 @@
 					<h1 class=" mb-3 text-primary fancy-heading">All Mahamantras from all over world at a place</h1>
 					<div class="seperator"></div>
 				</div>
-				<!-- <p class="mt-4 mb-4 text-justify">
+				<p class="mt-4 mb-4 text-justify">
 					Have you seen this message before? “Please chant these names of God—Hare Krishna, Hare Krishna, Krishna Krishna, Hare Hare/ Hare Rama, Hare Rama, Rama Rama, Hare Hare—and your life will be sublime.”
-				</p> -->
-				<!-- <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0">
+				</p>
+				<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0">
 				  <thead>
 				    <tr>
 				      <th class="th-sm">#
 				      </th>
 				      <th class="th-sm">Country Name
 				      </th>
-				      <th class="th-sm">City
-				      </th>
 				      <th class="th-sm">Total Japa
 				      </th>
 				      <th class="th-sm">Today's Japa
 				      </th>
-				      <th class="th-sm">Max Japa By (Devotee Name)
+				      <th class="th-sm">Today Max Japa By (Devotee Name)
 				      </th>
 				    </tr>
 				  </thead>
 				  <tbody>
+				  	<?php $i=0; foreach ($japa_statics as $key => $value): $i++;?>
 				    <tr>
-				      <td>Tiger Nixon</td>
-				      <td>System Architect</td>
-				      <td>Edinburgh</td>
-				      <td>61</td>
-				      <td>2011/04/25</td>
-				      <td>$320,800</td>
+				      <td><?= $i; ?></td>
+				      <td><?= $key; ?></td>
+				      <td><?= $value['total_japa']; ?></td>
+				      <td><?= $value['today_japa']; ?></td>
+				      <td><?= $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>" ?></td>
 				    </tr>
+				  	<?php endforeach ?>
 				  </tbody>
 				  <tfoot>
 				    <tr>
@@ -78,17 +77,15 @@
 				      </th>
 				      <th class="th-sm">Country Name
 				      </th>
-				      <th class="th-sm">City
-				      </th>
 				      <th class="th-sm">Total Japa
 				      </th>
 				      <th class="th-sm">Today's Japa
 				      </th>
-				      <th class="th-sm">Max Japa By (Devotee Name)
+				      <th class="th-sm">Today Max Japa By (Devotee Name)
 				      </th>
 				    </tr>
 				  </tfoot>
-				</table> -->
+				</table>
 				<h3 class="text-center pt-5">Japa Data from all over world will be available soon here </h3>
 			</div>
 		</div>

@@ -101,7 +101,36 @@
 		}
 
 		function totalJapaData(){
+			$this->db->order_by('city','asc');
 			return $this->db->get('japayag')->result_array();
+		}
+
+		function japaStatic()
+		{
+			$this->db->order_by('city','asc');
+			$country_data = json_decode(file_get_contents(base_url('assets/countries.min.json/countries.min.json')));
+			foreach ($country_data as $key => $value) {		
+					$query = $this->db->where('country',$key)->get('japayag')->result_array();	
+					if ($query) {
+						$query_['total_japa'] = $this->db->select_sum('japa')->where('country',$key)->get('japayag')->row('japa');
+						$today_japa_sum = $this->db->select_sum('japa')->where(['country'=>$key, 'date'=>$this->GMTDate])->get('japayag')->row('japa');
+						if ($today_japa_sum) {
+							$query_['today_japa'] = $today_japa_sum;
+						}
+						else{
+							$query_['today_japa']= 0;
+						}
+						$max_japa = $this->db->select_max('japa')->where(['country'=>$key, 'date'=>$this->GMTDate])->get('japayag')->row('japa');
+						$max_japa_user_id = $this->db->where(['japa'=>$max_japa])->get('japayag')->row('userID');
+						$query_['today_max_japa_by']['japa'] = $max_japa;
+						$query_['today_max_japa_by']['name'] = $this->db->where('ID',$max_japa_user_id)->get('users')->row('name');
+						$data[$key] = $query_;
+					}
+			}
+			// echo "<pre>";
+			// print_r($data);
+			// exit();
+			return $data;
 		}
 	}
 ?>

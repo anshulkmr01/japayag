@@ -9,11 +9,8 @@
 
 		function index()
 		{
-			$japa_data = $this->JapaYagModel->totalJapaData();
-			// echo "<pre>";
-			// print_r($japa_data);
-			// exit();
-			$this->load->view('japa_statics');
+			$japa_data = $this->JapaYagModel->japaStatic();
+			$this->load->view('japa_statics',['japa_statics'=>$japa_data]);
 		}
 
 	}

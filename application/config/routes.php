@@ -73,5 +73,4 @@ $route['whychanting'] = 'Home/whychanting';
 $route['saveJapa'] = 'JapaYag/saveJapa';
 $route['updateJapa'] = 'JapaYag/updateJapa';
 $route['collectReward'] = 'JapaYag/collectReward';
-
 $route['japa-statics'] = 'JapaStatics';
