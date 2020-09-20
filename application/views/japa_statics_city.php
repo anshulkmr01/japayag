@@ -54,49 +54,51 @@
 						<a class="btn bg-off-purple" href="<?= base_url('japa-statics')?>">Back</a>
 					</div>
 				</div>
-				<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0">
-				  <thead>
-				    <tr>
-				      <th class="th-sm">#
-				      </th>
-				      <th class="th-sm">City Name
-				      </th>
-				      <th class="th-sm">Total Japa
-				      </th>
-				      <th class="th-sm">Today's Japa
-				      </th>
-				      <th class="th-sm">Today Max Japa By (Devotee Name)
-				      </th>
-				    </tr>
-				  </thead>
-				  <tbody>
-				  	<?php $i=0; foreach ($japa_statics as $key => $value): $i++;?>
-				    <tr>
-				      <td><?= $i; ?></td>
-				      <td><?= $key; ?></td>
-				      <td><?= $value['total_japa']; ?></td>
-				      <td><?= $value['today_japa']; ?></td>
-				      <td><?php if ($value['today_max_japa_by']['name']) {
-				      echo $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>";
-				      } ?></td>
-				    </tr>
-				  	<?php endforeach ?>
-				  </tbody>
-				  <tfoot>
-				    <tr>
-				      <th class="th-sm">#
-				      </th>
-				      <th class="th-sm">City Name
-				      </th>
-				      <th class="th-sm">Total Japa
-				      </th>
-				      <th class="th-sm">Today's Japa
-				      </th>
-				      <th class="th-sm">Today Max Japa By (Devotee Name)
-				      </th>
-				    </tr>
-				  </tfoot>
-				</table>
+				<div class="table-responsive-lg">
+					<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0">
+					  <thead>
+					    <tr>
+					      <th class="th-sm">#
+					      </th>
+					      <th class="th-sm">City Name
+					      </th>
+					      <th class="th-sm">Total Japa
+					      </th>
+					      <th class="th-sm">Today's Japa
+					      </th>
+					      <th class="th-sm">Today Max Japa By (Devotee Name)
+					      </th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					  	<?php $i=0; foreach ($japa_statics as $key => $value): $i++;?>
+					    <tr>
+					      <td><?= $i; ?></td>
+					      <td><?= $key; ?></td>
+					      <td><?= $value['total_japa']; ?></td>
+					      <td><?= $value['today_japa']; ?></td>
+					      <td><?php if ($value['today_max_japa_by']['name']) {
+					      echo $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>";
+					      } ?></td>
+					    </tr>
+					  	<?php endforeach ?>
+					  </tbody>
+					  <tfoot>
+					    <tr>
+					      <th class="th-sm">#
+					      </th>
+					      <th class="th-sm">City Name
+					      </th>
+					      <th class="th-sm">Total Japa
+					      </th>
+					      <th class="th-sm">Today's Japa
+					      </th>
+					      <th class="th-sm">Today Max Japa By (Devotee Name)
+					      </th>
+					    </tr>
+					  </tfoot>
+					</table>
+				</div>
 			</div>
 		</div>
 	<!--/ Main Body -->
