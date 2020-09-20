@@ -170,6 +170,9 @@ p{
   color: #fff;
   background: #b70657;
 }
+.page-link{
+  background: #bf4858!important;
+}
 .page-item.disabled .page-link{
   background: #bf4858!important;
 }
