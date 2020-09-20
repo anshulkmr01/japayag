@@ -68,13 +68,13 @@
 					  	<?php $i=0; foreach ($japa_statics as $key => $value): $i++;?>
 					    <tr>
 					      <td><?= $i; ?></td>
-					      <td><?= $key; ?></td>
+					      <td><?= $value['country']; ?></td>
 					      <td><?= $value['total_japa']; ?></td>
 					      <td><?= $value['today_japa']; ?></td>
 					      <td><?php if ($value['today_max_japa_by']['name']) {
 					      echo $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>";
 					      } ?></td>
-					      <td><center><a href="<?= base_url('japa-statics-city/').$key?>"><span class="material-icons" style="line-height: normal;">link</span></a></center></td>
+					      <td><center><a href="<?= base_url('japa-statics/').$value['country']?>"><span class="material-icons" style="line-height: normal;">link</span></a></center></td>
 					    </tr>
 					  	<?php endforeach ?>
 					  </tbody>

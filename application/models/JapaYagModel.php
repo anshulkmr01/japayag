@@ -114,6 +114,7 @@
 					if ($query) {
 						$query_['total_japa'] = $this->db->select_sum('japa')->where('country',$key)->get('japayag')->row('japa');
 						$today_japa_sum = $this->db->select_sum('japa')->where(['country'=>$key, 'date'=>$this->GMTDate])->get('japayag')->row('japa');
+						$query_['country'] = $key;
 						if ($today_japa_sum) {
 							$query_['today_japa'] = $today_japa_sum;
 						}
@@ -124,9 +125,10 @@
 						$max_japa_user_id = $this->db->where(['japa'=>$max_japa])->get('japayag')->row('userID');
 						$query_['today_max_japa_by']['japa'] = $max_japa;
 						$query_['today_max_japa_by']['name'] = $this->db->where('ID',$max_japa_user_id)->get('users')->row('name');
-						$data[$key] = $query_;
+						$data[] = $query_;
 					}
 			}
+			rsort($data);
 			// echo "<pre>";
 			// print_r($data);
 			// exit();
@@ -135,13 +137,13 @@
 
 		function japaStaticCity($country)
 		{
-			$data['country_name'] = $country;
 			$this->db->order_by('city','asc');
 			foreach ($this->country_data->$country as $key => $value) {		
 					$query = $this->db->where(['country'=>$country,'city'=>$value])->get('japayag')->result_array();	
 					if ($query) {
 						$query_['total_japa'] = $this->db->select_sum('japa')->where(['country'=>$country,'city'=>$value])->get('japayag')->row('japa');
 						$today_japa_sum = $this->db->select_sum('japa')->where(['country'=>$country,'city'=>$value, 'date'=>$this->GMTDate])->get('japayag')->row('japa');
+						$query_['city'] = $value;
 						if ($today_japa_sum) {
 							$query_['today_japa'] = $today_japa_sum;
 						}
@@ -152,9 +154,12 @@
 						$max_japa_user_id = $this->db->where(['japa'=>$max_japa])->get('japayag')->row('userID');
 						$query_['today_max_japa_by']['japa'] = $max_japa;
 						$query_['today_max_japa_by']['name'] = $this->db->where('ID',$max_japa_user_id)->get('users')->row('name');
-						$data[$value] = $query_;
+						$data[] = $query_;
 					}
 			}
+			rsort($data);
+			
+			$data['country_name'] = $country;
 			// echo "<pre>";
 			// print_r($data);
 			// exit();

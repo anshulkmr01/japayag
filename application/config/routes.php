@@ -74,4 +74,4 @@ $route['saveJapa'] = 'JapaYag/saveJapa';
 $route['updateJapa'] = 'JapaYag/updateJapa';
 $route['collectReward'] = 'JapaYag/collectReward';
 $route['japa-statics'] = 'JapaStatics';
-$route['japa-statics-city/(:any)'] = 'JapaStatics/JapaStatics_City/$1';
+$route['japa-statics/(:any)'] = 'JapaStatics/JapaStatics_City/$1';

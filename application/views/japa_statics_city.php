@@ -74,7 +74,7 @@
 					  	<?php $i=0; foreach ($japa_statics as $key => $value): $i++;?>
 					    <tr>
 					      <td><?= $i; ?></td>
-					      <td><?= $key; ?></td>
+					      <td><?= $value['city']; ?></td>
 					      <td><?= $value['total_japa']; ?></td>
 					      <td><?= $value['today_japa']; ?></td>
 					      <td><?php if ($value['today_max_japa_by']['name']) {
