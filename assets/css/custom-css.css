@@ -161,6 +161,21 @@ p{
 .page-footer a:hover{
   color: #b70657;
 }
+.bg-off-purple{
+  transition: 0.3s;
+  background: #bf4858;
+  color: #fff;
+}
+.bg-off-purple:hover{
+  color: #fff;
+  background: #b70657;
+}
+.page-item.disabled .page-link{
+  background: #bf4858!important;
+}
+.page-item.active .page-link{
+  background: #b70657!important;
+}
 .page-footer .social-icons{
   text-align: center;
   display: inline-flex;

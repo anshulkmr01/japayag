@@ -12,7 +12,8 @@
 
 		  gtag('config', 'UA-176842645-1');
 		</script>
-
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<title>Why Chanting</title>
 	<!-- Global Css using Helper -->
 	<?php 
@@ -58,6 +59,8 @@
 				      </th>
 				      <th class="th-sm">Today Max Japa By (Devotee Name)
 				      </th>
+				      <th class="th-sm">City Data
+				      </th>
 				    </tr>
 				  </thead>
 				  <tbody>
@@ -70,6 +73,7 @@
 				      <td><?php if ($value['today_max_japa_by']['name']) {
 				      echo $value['today_max_japa_by']['name']." <span class='text-primary'>(".$value['today_max_japa_by']['japa']." Japa)</span>";
 				      } ?></td>
+				      <td><center><a href="<?= base_url('japa-statics-city/').$key?>"><span class="material-icons" style="line-height: normal;">link</span></a></center></td>
 				    </tr>
 				  	<?php endforeach ?>
 				  </tbody>
@@ -85,10 +89,11 @@
 				      </th>
 				      <th class="th-sm">Today Max Japa By (Devotee Name)
 				      </th>
+				      <th class="th-sm">City Data
+				      </th>
 				    </tr>
 				  </tfoot>
 				</table>
-				<h3 class="text-center pt-5">Japa Data from all over world will be available soon here </h3>
 			</div>
 		</div>
 	<!--/ Main Body -->
